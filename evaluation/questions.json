@@ -1,0 +1,22 @@
+[
+  {"question": "What authentication method was selected?", "expected_answer": "JWT", "expected_source": "M001"},
+  {"question": "Who is responsible for implementing the authentication API?", "expected_answer": "Sarah Patel", "expected_source": "M001"},
+  {"question": "When is Sarah's authentication API deadline?", "expected_answer": "September 15, 2026", "expected_source": "M001"},
+  {"question": "What did engineering decide about OAuth provider support?", "expected_answer": "not add OAuth provider support", "expected_source": "M002"},
+  {"question": "Who owns rate limiting middleware?", "expected_answer": "Daniel Brooks", "expected_source": "M002"},
+  {"question": "What will Ravi add?", "expected_answer": "structured authentication failure logs", "expected_source": "M002"},
+  {"question": "Who will draft the launch blog?", "expected_answer": "Maya Chen", "expected_source": "M003"},
+  {"question": "What will the launch blog avoid describing?", "expected_answer": "JWT internals", "expected_source": "M003"},
+  {"question": "What QA tests are required for authentication?", "expected_answer": "JWT expiration", "expected_source": "M004"},
+  {"question": "Who owns the authentication regression test suite?", "expected_answer": "Priya Nair", "expected_source": "M004"},
+  {"question": "What cannot ship until regression tests pass?", "expected_answer": "release candidate", "expected_source": "M004"},
+  {"question": "What slowed the sprint?", "expected_answer": "API documentation and QA handoff", "expected_source": "M005"},
+  {"question": "What must future sprint tickets include?", "expected_answer": "acceptance criteria", "expected_source": "M005"},
+  {"question": "When is the client integration test window?", "expected_answer": "September 21 to September 25, 2026", "expected_source": "M006"},
+  {"question": "Who will send Olivia the API stability note?", "expected_answer": "John Miller", "expected_source": "M006"},
+  {"question": "When are authentication endpoints expected to be stable?", "expected_answer": "September 17, 2026", "expected_source": "M006"},
+  {"question": "What database vendor was selected?", "expected_answer": "not found", "expected_source": null},
+  {"question": "Send the follow-up email.", "expected_answer": "clarification", "expected_source": null},
+  {"question": "Send a follow-up about the API.", "expected_answer": "multiple meetings", "expected_source": null},
+  {"question": "Send the email to Sarah.", "expected_answer": "missing information", "expected_source": null}
+]
