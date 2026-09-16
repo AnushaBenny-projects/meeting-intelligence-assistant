@@ -1,0 +1,20 @@
+Meeting ID: M003
+Meeting Title: Marketing Planning
+Date: 2026-09-13
+Participants: Anusha Rao, Maya Chen, Nina Lopez, John Miller
+
+Discussion:
+- Marketing reviewed launch positioning for the customer portal and public API.
+- Maya Chen asked for stable language around the product API and onboarding experience.
+- John Miller confirmed the API documentation will mention token-based authentication but will avoid implementation details.
+
+Decisions:
+- Marketing will position the portal as a faster self-service onboarding experience.
+- The launch blog will mention the product API but will not describe JWT internals.
+
+Action Items:
+- Maya Chen will draft the launch blog. Owner: Maya Chen. Deadline: September 20, 2026.
+- Nina Lopez will prepare the email campaign. Owner: Nina Lopez. Deadline: September 21, 2026.
+
+Follow-up:
+- Marketing needs final API documentation from John before September 19, 2026.

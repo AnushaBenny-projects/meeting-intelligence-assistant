@@ -1,0 +1,21 @@
+Meeting ID: M006
+Meeting Title: Client Project Review
+Date: 2026-09-16
+Participants: Anusha Rao, Olivia Grant, Sarah Patel, John Miller
+
+Discussion:
+- Olivia Grant reviewed client concerns about project timeline, reporting, and API stability.
+- The client asked whether authentication behavior will be stable for their integration test window.
+- Sarah Patel said the JWT authentication endpoints are expected to be stable after September 17, 2026.
+- John Miller said the client-facing API notes will be updated once the engineering review changes are merged.
+
+Decisions:
+- The client integration test window remains September 21 to September 25, 2026.
+- The team will send the client an API stability note before the test window begins.
+
+Action Items:
+- John Miller will send Olivia the API stability note. Owner: John Miller. Deadline: September 19, 2026.
+- Sarah Patel will confirm authentication endpoint stability. Owner: Sarah Patel. Deadline: September 17, 2026.
+
+Follow-up:
+- Anusha Rao will follow up with Olivia Grant after Sarah confirms endpoint stability.

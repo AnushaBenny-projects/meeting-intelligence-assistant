@@ -1,0 +1,24 @@
+Meeting ID: M001
+Meeting Title: Product Planning Meeting
+Date: 2026-09-10
+Participants: Anusha Rao, Sarah Patel, John Miller, Maya Chen, Priya Nair
+
+Discussion:
+- The team reviewed onboarding requirements for the new customer portal.
+- Authentication was discussed across password login, SSO, and token-based APIs.
+- Sarah Patel recommended JWT, also called JSON Web Token authentication, for version 1 because it works with the mobile app and backend API gateway.
+- Priya Nair noted that SSO can be revisited after the enterprise pilot.
+
+Decisions:
+- The team decided to use JWT authentication for version 1 of the customer portal.
+- The API will expose login, refresh-token, and logout endpoints.
+- SSO is out of scope for the first release.
+
+Action Items:
+- Sarah Patel will implement the authentication API. Owner: Sarah Patel. Deadline: September 15, 2026.
+- John Miller will update the API documentation with token lifetime and refresh behavior. Owner: John Miller. Deadline: September 16, 2026.
+- Maya Chen will prepare product release notes for the authentication flow. Owner: Maya Chen. Deadline: September 18, 2026.
+
+Follow-up:
+- Anusha Rao will check progress with Sarah before the engineering review.
+- The next planning checkpoint is September 17, 2026.

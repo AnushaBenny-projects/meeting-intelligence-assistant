@@ -1,0 +1,21 @@
+Meeting ID: M005
+Meeting Title: Sprint Retrospective
+Date: 2026-09-18
+Participants: Anusha Rao, Sarah Patel, John Miller, Priya Nair, Daniel Brooks, Maya Chen
+
+Discussion:
+- The team discussed what went well and what slowed down the sprint.
+- Authentication work was mostly on track, but API documentation and QA handoff happened later than expected.
+- Priya Nair said earlier test scenarios would reduce rework.
+- Sarah Patel requested clearer acceptance criteria before implementation begins.
+
+Decisions:
+- Future sprint tickets must include acceptance criteria before development starts.
+- QA review will happen two days before code freeze.
+
+Action Items:
+- Anusha Rao will update the sprint planning checklist. Owner: Anusha Rao. Deadline: September 22, 2026.
+- John Miller will add documentation readiness to the release checklist. Owner: John Miller. Deadline: September 22, 2026.
+
+Follow-up:
+- The team will review the checklist updates in the next sprint planning meeting.

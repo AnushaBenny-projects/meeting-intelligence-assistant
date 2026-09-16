@@ -1,0 +1,20 @@
+Meeting ID: M004
+Meeting Title: QA Review
+Date: 2026-09-14
+Participants: Anusha Rao, Priya Nair, Sarah Patel, Daniel Brooks
+
+Discussion:
+- QA reviewed test coverage for authentication, API rate limiting, and session expiration.
+- Priya Nair asked for negative tests for expired JWT tokens and malformed refresh tokens.
+- Sarah Patel confirmed the authentication API will return consistent error codes.
+
+Decisions:
+- QA will add regression tests for JWT expiration, refresh-token failure, and login rate limiting.
+- The release candidate cannot ship until authentication regression tests pass.
+
+Action Items:
+- Priya Nair will create the authentication regression test suite. Owner: Priya Nair. Deadline: September 19, 2026.
+- Daniel Brooks will provide rate-limit test data. Owner: Daniel Brooks. Deadline: September 18, 2026.
+
+Follow-up:
+- Priya will share QA results in the sprint retrospective.

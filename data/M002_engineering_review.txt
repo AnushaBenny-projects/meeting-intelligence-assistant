@@ -1,0 +1,22 @@
+Meeting ID: M002
+Meeting Title: Engineering Review
+Date: 2026-09-12
+Participants: Anusha Rao, Sarah Patel, John Miller, Daniel Brooks, Ravi Shah
+
+Discussion:
+- The backend team reviewed the API gateway, authentication middleware, and logging.
+- Sarah Patel reported that JWT implementation is underway and the refresh-token handler still needs review.
+- Daniel Brooks raised a concern about rate limiting on the login endpoint.
+- Ravi Shah suggested adding structured logs for failed authentication attempts.
+
+Decisions:
+- The engineering team agreed to keep JWT for authentication and add rate limiting to login and refresh-token endpoints.
+- The team will not add OAuth provider support in this sprint.
+
+Action Items:
+- Daniel Brooks will add rate limiting middleware. Owner: Daniel Brooks. Deadline: September 17, 2026.
+- Sarah Patel will finish the refresh-token handler. Owner: Sarah Patel. Deadline: September 15, 2026.
+- Ravi Shah will add structured authentication failure logs. Owner: Ravi Shah. Deadline: September 18, 2026.
+
+Follow-up:
+- John Miller will review the API gateway documentation after Sarah completes the handler.
