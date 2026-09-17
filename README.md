@@ -114,15 +114,3 @@ The local answer generator is intentionally conservative and extractive. Real LL
 - Add a production MCP stdio client transport.
 - Add observability dashboards for retrieval confidence and email sends.
 
-## GitHub Readiness
-
-Suggested logical commits:
-
-```bash
-git add . && git commit -m "Initial project setup"
-git commit -m "Add synthetic meeting transcripts"
-git commit -m "Implement RAG ingestion and retrieval"
-git commit -m "Add LangGraph agent and ambiguity handling"
-git commit -m "Add MCP email integration and Streamlit UI"
-git commit -m "Add tests evaluation and documentation"
-```
