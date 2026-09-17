@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import hashlib
+import logging
 import math
 import os
 import re
 from dataclasses import dataclass
 from typing import Iterable, List, Protocol
+
+LOGGER = logging.getLogger(__name__)
 
 
 class EmbeddingModel(Protocol):
@@ -44,9 +47,12 @@ class SentenceTransformerEmbeddingModel:
 
 
 def get_embedding_model() -> EmbeddingModel:
-    if os.getenv("USE_SENTENCE_TRANSFORMERS", "").lower() not in {"1", "true", "yes"}:
+    if os.getenv("USE_HASH_EMBEDDINGS", "").lower() in {"1", "true", "yes"}:
         return HashingEmbeddingModel()
     try:
         return SentenceTransformerEmbeddingModel()
-    except Exception:
-        return HashingEmbeddingModel()
+    except Exception as exc:
+        if os.getenv("ALLOW_HASH_EMBEDDINGS_FALLBACK", "false").lower() in {"1", "true", "yes"}:
+            LOGGER.warning("[RAG] SentenceTransformer unavailable; using local hashing fallback: %s", exc)
+            return HashingEmbeddingModel()
+        raise

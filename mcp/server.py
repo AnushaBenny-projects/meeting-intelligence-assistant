@@ -7,6 +7,10 @@ import smtplib
 from email.message import EmailMessage
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 EMAIL_PATTERN = re.compile(r"^[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}$")
 
@@ -45,11 +49,14 @@ def _send_smtp(to: str, subject: str, body: str) -> dict:
     message.set_content(body)
     host = os.environ["SMTP_HOST"]
     port = int(os.getenv("SMTP_PORT", "587"))
-    with smtplib.SMTP(host, port, timeout=20) as smtp:
-        if os.getenv("SMTP_USE_TLS", "true").lower() == "true":
-            smtp.starttls()
-        smtp.login(os.environ["SMTP_USERNAME"], os.environ["SMTP_PASSWORD"])
-        smtp.send_message(message)
+    try:
+        with smtplib.SMTP(host, port, timeout=20) as smtp:
+            if os.getenv("SMTP_USE_TLS", "true").lower() == "true":
+                smtp.starttls()
+            smtp.login(os.environ["SMTP_USERNAME"], os.environ["SMTP_PASSWORD"])
+            smtp.send_message(message)
+    except Exception as exc:
+        return {"status": "error", "error": f"SMTP send failed: {exc}"}
     return {"status": "sent", "mode": "smtp", "recipient": to}
 
 

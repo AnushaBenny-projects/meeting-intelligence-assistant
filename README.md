@@ -53,6 +53,8 @@ copy .env.example .env
 
 See `.env.example`. Keep `.env` out of Git. For development, use `EMAIL_MODE=mock`. For SMTP, set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_USE_TLS`, and `EMAIL_FROM`.
 
+For Groq, set `LLM_PROVIDER=groq`, `GROQ_API_KEY`, `GROQ_MODEL`, and `GROQ_BASE_URL`. The app calls Groq only after RAG evidence is retrieved and falls back to the deterministic local generator if the API is unavailable.
+
 ## How to Run
 
 ```bash

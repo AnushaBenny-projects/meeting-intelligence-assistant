@@ -13,14 +13,17 @@ AMBIGUOUS_EMAIL_PATTERNS = [
 
 
 def classify_intent(query: str) -> Intent:
-    text = query.strip().lower().strip(".!? ")
+    raw_text = query.strip().lower()
+    text = raw_text.strip(".!? ")
     if not text:
         return "AMBIGUOUS"
     if any(re.search(pattern, text) for pattern in AMBIGUOUS_EMAIL_PATTERNS):
         return "AMBIGUOUS"
     if re.search(r"\b(send|email|mail)\b", text) and re.search(r"\b(follow|summary|action|items|decision|about|to)\b", text):
         return "EMAIL"
-    if "?" in text or re.search(r"\b(what|who|when|where|which|did|was|were|decided|owns|responsible)\b", text):
+    if extract_meeting_reference(query) and re.search(r"\b(show|open|display|summarize|summary|details|meeting)\b", text):
+        return "MEETING_LOOKUP"
+    if "?" in raw_text or re.search(r"\b(what|who|when|where|which|how|is|are|do|does|did|was|were|decided|owns|responsible)\b", text):
         return "QUESTION"
     return "AMBIGUOUS"
 

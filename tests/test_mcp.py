@@ -6,7 +6,8 @@ def test_send_email_tool_exists():
     assert callable(send_email_tool)
 
 
-def test_valid_email_succeeds():
+def test_valid_email_succeeds(monkeypatch):
+    monkeypatch.setenv("EMAIL_MODE", "mock")
     result = EmailMCPClient().send_email("verified@example.com", "Subject", "Body")
     assert result["status"] == "sent"
 

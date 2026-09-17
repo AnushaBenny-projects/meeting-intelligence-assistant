@@ -6,5 +6,6 @@ __pycache__/
 .pytest_cache/
 .chroma/
 chroma_db/
+.test_chroma/
 sent_emails/
 *.log

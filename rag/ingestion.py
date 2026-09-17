@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -52,7 +53,7 @@ def load_transcripts(data_dir: str | Path = "data") -> list[DocumentChunk]:
 
 def ingest_transcripts(
     data_dir: str | Path = "data",
-    persist_dir: str | Path = ".chroma",
+    persist_dir: str | Path | None = None,
     collection_name: str = "meeting_transcripts",
     embedding_model: EmbeddingModel | None = None,
 ):
@@ -61,7 +62,7 @@ def ingest_transcripts(
     LOGGER.info("[RAG] Ingesting transcripts from %s", data_dir)
     return MeetingRetriever.from_chunks(
         load_transcripts(data_dir),
-        persist_dir=persist_dir,
+        persist_dir=persist_dir or os.getenv("CHROMA_PERSIST_DIR", "chroma_db"),
         collection_name=collection_name,
         embedding_model=embedding_model or get_embedding_model(),
     )

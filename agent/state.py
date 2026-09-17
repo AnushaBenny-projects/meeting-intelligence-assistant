@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any, Literal, TypedDict
 
 
-Intent = Literal["QUESTION", "EMAIL", "AMBIGUOUS"]
+Intent = Literal["QUESTION", "EMAIL", "MEETING_LOOKUP", "AMBIGUOUS"]
 
 
 class AgentState(TypedDict, total=False):
